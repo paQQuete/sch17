@@ -61,7 +61,7 @@ AUTH_PASSWORD_VALIDATORS = [{'NAME':
                                     'django.contrib.auth.password_validation.CommonPasswordValidator'}, {
                                 'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'}
                             ]
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'en'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
@@ -86,3 +86,4 @@ META_USE_SITES = True
 META_USE_OG_PROPERTIES = True
 META_USE_TWITTER_PROPERTIES = True
 META_USE_SCHEMAORG_PROPERTIES = True
+
