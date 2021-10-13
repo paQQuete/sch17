@@ -1,12 +1,79 @@
 {% load cms_tags menu_tags sekizai_tags i18n static %}
-<html>
+
     <head>
-        <title>{% page_attribute "page_title" %}</title>
-        {% render_block "css" %}
+
     </head>
     <body>
-        {% cms_toolbar %}
-        {% placeholder "content" %}
-        {% render_block "js" %}
+
     </body>
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<!-- Stylesheets & Title
+	============================================= -->
+    <title>{% page_attribute "page_title" %}</title>
+    {% render_block "css" %}
+
+
+
+</head>
+<body>
+{% cms_toolbar %}
+
+
+	<!-- The Main Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header">
+
+			...
+
+		</header>
+
+		<!-- Site Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+                    {% block content %}
+                    {% endblock %}
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+			<div class="container">
+
+				...
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
+
+					...
+
+				</div>
+			</div>
+
+		</footer>
+
+	</div>
+
+	<!-- Scripts
+	============================================= -->
+{% render_block "js" %}
+</body>
 </html>
